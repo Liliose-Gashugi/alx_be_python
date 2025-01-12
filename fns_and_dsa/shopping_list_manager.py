@@ -9,15 +9,15 @@ def main():
     shopping_list = []
     while True:
         display_menu()
-        choice = int(input("Enter your choice: ")).strip()
+        choice = int(input("Enter your choice: "))
 
-        if choice == '1':
+        if choice == 1:
             item = str(input("Enter the name of an item to add: ")).strip()
             shopping_list.append(item)
             print(f"'{item}' has been added to the shopping list.")
 
 
-        elif choice == '2':
+        elif choice == 2:
             item = str(input("Enter the name of an item to remove: ")).strip()
             if item in shopping_list:
                 shopping_list.remove(item)
@@ -27,7 +27,7 @@ def main():
 
 
 
-        elif choice == '3':
+        elif choice == 3:
             if shopping_list:
                 print("\n Current Shopping List:")
                 for i, item in enumerate(shopping_list, start=1):
@@ -38,7 +38,7 @@ def main():
 
 
 
-        elif choice == '4':
+        elif choice == 4:
             print("Goodbye!")
             break
         else:
