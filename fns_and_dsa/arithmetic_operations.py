@@ -22,8 +22,8 @@ def perform_operation(num1, num2, operation):
         return num1 * num2
     elif operation == 'divide':
         if num2 == 0:
-            return "Error: Division by zero is not allowed."
+            raise ValueError("Division by zero is not allowed")
         return num1 / num2
     else:
-        return "Error: Invalid operation."
+        raise ValueError("Invalid operation. Supported operations are: 'add', 'subtract', 'multiply', 'divide'.")
     
