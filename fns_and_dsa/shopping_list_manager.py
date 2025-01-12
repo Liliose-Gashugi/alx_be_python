@@ -13,7 +13,7 @@ def main():
             choice = int(input("Enter your choice: "))
 
             if choice == 1:
-                item = input("Enter the name of an item to add: ").strip()
+                item = input("Enter the item to add: ").strip()
                 shopping_list.append(item)
                 print(f"'{item}' has been added to the shopping list.")
 
@@ -44,7 +44,7 @@ def main():
                 break
             else:
                 print("Invalid choice. Please try again.")
-                
+
         except ValueError:
             print("Invalid choice. Please enter a number between 1 and 4.")
 if __name__ == "__main__":
