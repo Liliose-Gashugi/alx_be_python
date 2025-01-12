@@ -4,11 +4,11 @@ FREEZING_POINT_FAHRENHEIT = 32
 
 def convert_to_celsius(fahrenheit):
     """Converts a Fahrenheit temperature to Celsius."""
-    return (fahrenheit - FREEZING_POINT_FAHRENHEIT) * FAHRENHEIT_TO_CELSIUS_FACTOR
+    return (fahrenheit - 32) * FAHRENHEIT_TO_CELSIUS_FACTOR
 
 def convert_to_fahrenheit(celsius):
     """Converts a Celsius temperature to Fahrenheit."""
-    return celsius * CELSIUS_TO_FAHRENHEIT_FACTOR + FREEZING_POINT_FAHRENHEIT
+    return (celsius * CELSIUS_TO_FAHRENHEIT_FACTOR) + 32
 
 def main():
     """Main function to interact with the user and perform the temperature conversions"""
@@ -16,7 +16,7 @@ def main():
     try:
         temperature= input("Enter the temperature to convert: ")
 
-        if not temperature.replace('.', '', 1).isdigit()and not temperature.lstrip('-').replace('.', '', 1).isdigit():
+        if not temperature.replace('.', '', 1).isdigit():
             raise ValueError("Invalid temperature. Please enter a numeric value.")
         temperature = float(temperature)
         unit=input("Is this temperature in Celsius or Fahrenheit? (C/F): ").strip().upper()
