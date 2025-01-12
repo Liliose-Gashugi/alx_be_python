@@ -12,13 +12,13 @@ def main():
         choice = int(input("Enter your choice: ")).strip()
 
         if choice == '1':
-            item = input("Enter the name of an item to add: ").strip()
+            item = str(input("Enter the name of an item to add: ")).strip()
             shopping_list.append(item)
             print(f"'{item}' has been added to the shopping list.")
 
 
         elif choice == '2':
-            item = input("Enter the name of an item to remove: ").strip()
+            item = str(input("Enter the name of an item to remove: ")).strip()
             if item in shopping_list:
                 shopping_list.remove(item)
                 print(f"'{item}' has been removed from the shopping list.")
