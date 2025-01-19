@@ -5,7 +5,7 @@ class BankAccount:
         self.__account_balance = initial_balance
 
 
-        def deposit(self, amount):
+    def deposit(self, amount):
             """Deposit a specified amount into the account"""
 
             if amount > 0:
@@ -13,7 +13,7 @@ class BankAccount:
             else:
                 print("Deposit must be positive.")
 
-        def withdraw(self, amount):
+    def withdraw(self, amount):
             """Withdraw a specified amount if sufficient funds exist."""
 
             if amount > 0:
