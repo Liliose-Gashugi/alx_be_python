@@ -3,6 +3,7 @@ class Book:
 
     def __init__(self, title, author):
         """Initialize the book with a title, author, and availability status."""
+        self.books = []
         self.title = title
         self.author = author
         self._is_checked_out = False
