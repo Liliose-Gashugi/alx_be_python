@@ -9,7 +9,7 @@ class BankAccount:
             """Deposit a specified amount into the account"""
 
             if amount > 0:
-                self.__acccount_balance += amount
+                self.__account_balance += amount
             else:
                 print("Deposit must be positive.")
 
@@ -21,13 +21,13 @@ class BankAccount:
                     self.__account_balance -= amount
                     return True
                 else:
-                        return False
-            else:
-                    print("Withdrawal must be positive.")
                     return False
+            else:
+                print("Withdrawal must be positive.")
+                return False
         
 
         def display_balance(self):
              """Display the current balance."""
-             print(f"Current Balance: ${self.__accoun_balance:.2f}")
+             print(f"Current Balance: ${self.__account_balance:.2f}")
 
